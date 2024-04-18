@@ -69,6 +69,7 @@ TinyGSM also pulls data gently from the modem (whenever possible), so it can ope
 - SIMCom WCDMA/HSPA/HSPA+ Modules (SIM5360, SIM5320, SIM5300E, SIM5300E/A)
 - SIMCom LTE Modules (SIM7100E, SIM7500E, SIM7500A, SIM7600C, SIM7600E)
 - SIMCom SIM7000E/A/G CAT-M1/NB-IoT Module
+- SIMCom SIM7020C/G NB-IoT Module
 - SIMCom SIM7070/SIM7080/SIM7090 CAT-M1/NB-IoT Module
 - AI-Thinker A6, A6C, A7, A20
 - ESP8266/ESP32 (AT commands interface, similar to GSM modems)
@@ -93,7 +94,6 @@ TinyGSM also pulls data gently from the modem (whenever possible), so it can ope
 
 More modems may be supported later:
 - [ ] Quectel M10, UG95
-- [ ] SIMCom SIM7020
 - [ ] Telit GL865
 - [ ] ZTE MG2639
 - [ ] Hi-Link HLK-RM04
