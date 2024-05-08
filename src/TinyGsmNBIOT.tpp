@@ -70,10 +70,17 @@ template <class modemType> class TinyGsmNBIOT {
     // Gets the CCID of a sim card via AT+CCID
     String getSimCCIDImpl()
     {
-        thisModem().sendAT(GF("+CCID"));
-        if (thisModem().waitResponse(GF("+CCID:")) != 1) {
-            return "";
-        }
+        #if defined(TINY_GSM_MODEM_SIM7028)
+            thisModem().sendAT(GF("+CICCID"));
+            if (thisModem().waitResponse(GF("+CICCID:")) != 1) {
+                return "";
+            }
+        #else
+            thisModem().sendAT(GF("+CCID"));
+            if (thisModem().waitResponse(GF("+CCID:")) != 1) {
+                return "";
+            }
+        #endif
         String res = thisModem().stream.readStringUntil('\n');
         thisModem().waitResponse();
         res.trim();

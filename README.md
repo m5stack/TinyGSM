@@ -70,6 +70,7 @@ TinyGSM also pulls data gently from the modem (whenever possible), so it can ope
 - SIMCom LTE Modules (SIM7100E, SIM7500E, SIM7500A, SIM7600C, SIM7600E)
 - SIMCom SIM7000E/A/G CAT-M1/NB-IoT Module
 - SIMCom SIM7020C/G NB-IoT Module
+- SIMCom SIM7028  CAT-M1/NB-IoT Module
 - SIMCom SIM7070/SIM7080/SIM7090 CAT-M1/NB-IoT Module
 - AI-Thinker A6, A6C, A7, A20
 - ESP8266/ESP32 (AT commands interface, similar to GSM modems)
