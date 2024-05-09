@@ -29,7 +29,7 @@
 #include "TinyGsmModem.tpp"
 #include "TinyGsmTCP.tpp"
 #include "TinyGsmTime.tpp"
-#define MODE_NB_IOT      //Comment this macro definition when using CAT mode
+//#define MODE_NB_IOT      //Comment this macro definition when using CAT mode
 #ifdef MODE_NB_IOT
     #include "TinyGsmNBIOT.tpp"
 #else
@@ -666,7 +666,10 @@ class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
                 // Need to close all open sockets and release the network library.
                 // User will then need to reconnect.
                 DBG("### Network error!");
-                if (!isGprsConnected()) { gprsDisconnect(); }
+                #ifdef MODE_NB_IOT
+                #else
+                    if (!isGprsConnected()) { gprsDisconnect(); }
+                #endif    
                 data = "";
                 }
             }
