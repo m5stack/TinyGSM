@@ -278,8 +278,7 @@ class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
         // sendAT(GF("+CGPADDR=1"));  // Show PDP address
         String res;
         if (waitResponse(10000L, res) != 1) { return ""; }
-        res.replace(GSM_NL "OK" GSM_NL, "");
-        res.replace(GSM_NL, "");
+        res.replace("+IPADDR:", "");
         res.trim();
         return res;
     }
