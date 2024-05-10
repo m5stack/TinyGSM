@@ -2,7 +2,7 @@
  * @file       TinyGsmClientSIM7028.h
  * @author      junhuang
  * @license    LGPL-3.0
- * @copyright  Copyright (c) 2024 junhuang
+ * @copyright  Copyright (c) 2024 M5Stack Technology CO LTD
  * @date       May 2024
  */
 
@@ -160,6 +160,8 @@ class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
             return false;
         }
         sendAT("+CFUN=1");
+        waitResponse();
+        sendAT("+QCLEDMODE=1");
         waitResponse();
 
 #ifdef TINY_GSM_DEBUG
