@@ -69,7 +69,8 @@ TinyGSM also pulls data gently from the modem (whenever possible), so it can ope
 - SIMCom WCDMA/HSPA/HSPA+ Modules (SIM5360, SIM5320, SIM5300E, SIM5300E/A)
 - SIMCom LTE Modules (SIM7100E, SIM7500E, SIM7500A, SIM7600C, SIM7600E)
 - SIMCom SIM7000E/A/G CAT-M1/NB-IoT Module
-- SIMCom SIM7070/SIM7080/SIM7090 CAT-M1/NB-IoT Module
+- SIMCom SIM7020C/G NB-IoT Module
+- SIMCom SIM7028/SIM7070/SIM7080/SIM7090 CAT-M1/NB-IoT Module
 - SIMCom A7672X CAT-M1 Module
 - AI-Thinker A6, A6C, A7, A20
 - ESP8266/ESP32 (AT commands interface, similar to GSM modems)
@@ -95,6 +96,7 @@ TinyGSM also pulls data gently from the modem (whenever possible), so it can ope
 - Nimbelink Skywire/Airgain NL-SW-LTE-QBG96, NL-SW-LTE-QBG95
 - RAK WisLTE ***(alpha)***
 - ... other modules, based on supported modems. Some boards require [**special configuration**](https://github.com/vshymanskyy/TinyGSM/wiki/Board-configuration).
+
 
 Watch this repo for new updates! And of course, contributions are welcome ;)
 
