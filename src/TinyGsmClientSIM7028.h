@@ -36,8 +36,8 @@
    #include "TinyGsmGPRS.tpp"
 #endif
 #define GSM_NL "\r\n"
-static const char GSM_OK[] TINY_GSM_PROGMEM    = "OK" GSM_NL;
-static const char GSM_ERROR[] TINY_GSM_PROGMEM = "ERROR" GSM_NL;
+// static const char GSM_OK[] TINY_GSM_PROGMEM    = "OK" GSM_NL;
+// static const char GSM_ERROR[] TINY_GSM_PROGMEM = "ERROR" GSM_NL;
 #if defined       TINY_GSM_DEBUG
 static const char GSM_CME_ERROR[] TINY_GSM_PROGMEM = GSM_NL "+CME ERROR:";
 static const char GSM_CMS_ERROR[] TINY_GSM_PROGMEM = GSM_NL "+CMS ERROR:";
@@ -228,7 +228,7 @@ class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
      * Power functions
      */
   protected:
-    bool restartImpl()
+    bool restartImpl(const char* pin = NULL)
     {
         /* Hardware Reset */
         pinMode(this->reset_pin, OUTPUT);
