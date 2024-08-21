@@ -52,6 +52,7 @@ enum RegStatus
     REG_OK_HOME      = 1,
     REG_OK_ROAMING   = 5,
     REG_OK_SMS       = 6,
+    REG_OK_SMS_ROAMING = 7,
     REG_UNKNOWN      = 4,
 };
 class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
@@ -272,7 +273,7 @@ class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
     bool isNetworkConnectedImpl()
     {
         RegStatus s = getRegistrationStatus();
-        return (s == REG_OK_HOME || s == REG_OK_ROAMING || s == REG_OK_SMS);
+        return (s == REG_OK_HOME || s == REG_OK_ROAMING || s == REG_OK_SMS || s == REG_OK_SMS_ROAMING);
     }
 
     String getLocalIPImpl() {
