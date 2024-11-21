@@ -124,7 +124,7 @@ class TinyGsmSim7020 : public TinyGsmModem<TinyGsmSim7020>, public TinyGsmNBIOT<
      * Constructor
      */
   public:
-    explicit TinyGsmSim7020(Stream &stream, uint8_t reset_pin) : stream(stream), reset_pin(reset_pin) { memset(sockets, 0, sizeof(sockets)); }
+    explicit TinyGsmSim7020(Stream &stream, uint8_t reset_pin=-1) : stream(stream), reset_pin(reset_pin) { memset(sockets, 0, sizeof(sockets)); }
 
     /*
      * Basic functions

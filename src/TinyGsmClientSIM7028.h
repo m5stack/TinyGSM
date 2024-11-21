@@ -139,7 +139,7 @@ class TinyGsmSim7028 :  public TinyGsmModem<TinyGsmSim7028>,
      * Constructor
      */
   public:
-    explicit TinyGsmSim7028(Stream &stream, uint8_t reset_pin) : stream(stream), reset_pin(reset_pin) { memset(sockets, 0, sizeof(sockets)); }
+    explicit TinyGsmSim7028(Stream &stream, uint8_t reset_pin=-1) : stream(stream), reset_pin(reset_pin) { memset(sockets, 0, sizeof(sockets)); }
 
     /*
      * Basic functions
