@@ -83,6 +83,7 @@ TinyGSM also pulls data gently from the modem (whenever possible), so it can ope
 - Quectel BG95
 - Quectel M95
 - Quectel MC60 ***(alpha)***
+- ML307
 
 ### Supported boards/modules
 - EnviroDIY LTE Bee, WiFi Bee
@@ -190,6 +191,7 @@ Watch this repo for new updates! And of course, contributions are welcome ;)
 #### First Steps
 
   1. Using your phone:
+
     - Disable PIN code on the SIM card
     - Check your balance
     - Check that APN, User, Pass are correct and you have internet
